@@ -10,7 +10,7 @@ let value = 0;
 function keyPressed(){
  if(keyCode === RIGHT_ARROW){
     x = x + 10;
-    fill(200,0,0);
+    fill(200,0,0);1
   }
   if(keyCode === LEFT_ARROW){
     x = x - 10;
@@ -25,6 +25,16 @@ function keyPressed(){
     fill(200,0,200);
   }
 }
+function bad(){
+  triangle(100,100,120,120,80,120)
+
+}
+
+function coord(){
+  if(mouseIsPressed){
+    print("That's not going to work");
+  }
+}
 
 function man(){
   rect(x,y,50,50);
@@ -37,7 +47,8 @@ function setup() {
 
 function draw() {
   background(255);
-  man(x,y);
+  man();
+  bad();
   
   
 }

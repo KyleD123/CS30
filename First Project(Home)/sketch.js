@@ -7,6 +7,22 @@ let x = 555;
 let y = 500;
 let value = 0;
 
+function keyPressed(){
+ if(keyCode === RIGHT_ARROW){
+    x = x + 10;
+    
+  }
+  if(keyCode === LEFT_ARROW){
+    x = x - 10;
+    
+  } 
+  if(keyCode === UP_ARROW){
+    y = y - 10;
+  }
+  if(keyCode === DOWN_ARROW){
+    y = y + 10;
+  }
+}
 
 function man(){
   fill(value);
@@ -21,12 +37,7 @@ function setup() {
 function draw() {
   background(255);
   man(x,y);
-  if(keyCode === RIGHT_ARROW){
-    x = x + 1;
-  }
-  if(keyCode === LEFT_ARROW){
-    x = x - 1;
-  }
+  
 }
 
 

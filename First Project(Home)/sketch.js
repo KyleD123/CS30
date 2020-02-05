@@ -4,7 +4,7 @@
 
 
 let x = 555;
-let y = 250;
+let y = 500;
 let value = 0;
 
 
@@ -26,12 +26,6 @@ function draw() {
   }
   if(keyCode === LEFT_ARROW){
     x = x - 1;
-  }
-  if(keyCode === UP_ARROW){
-    y = y - 1;
-  }
-  if(keyCode === DOWN_ARROW){
-    y = y + 1;
   }
 }
 

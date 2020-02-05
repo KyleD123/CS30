@@ -14,7 +14,7 @@ function preload(){
 }
 
 function animation(){
-  for(let v = 0; v => 2; v ++;){
+  for(let img = 0; v = 2; v ++;){
     if(v =< 0){
       img = loadImage('assets/Still.png');
       image(img,400,0);

@@ -7,6 +7,7 @@
 let value = 200;
 let mine = "Kyle Doerksen";
 let sunX = 0;
+let cB = 0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -15,9 +16,27 @@ function grass(){
   fill(0,200,0);
   rect(0,500,2000,300);
 }
+
+
+function currentBack(){
+  if (mouseIsPressed === true && cB === 0){
+    cB = 0;
+    fill(200,0,0);
+    rect(0,0,2000,600);
+    cB = cB++;
+  }
+  if (mouseIsPressed === true && cB === 1){
+    cB = 1;
+    fill(0,200,0);
+    rect(0,0,2000,600);
+    cB = cB++;
+  }
+  
+}
 function sky(){
   fill(0,100,200);
   rect(0,0,2000,600);
+  currentBack();  
 }
 function house(){
   fill(200);

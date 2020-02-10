@@ -6,6 +6,7 @@
 // - describe what you did to take this project "above and beyond"
 let value = 200;
 let mine = "Kyle Doerksen";
+let sunX = 0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -93,13 +94,24 @@ function girl(){
 }
 
 
-function glasses(){
+function glasses(){//the glasses of the man
   fill(0);
   ellipse(90,695,10,10);
   fill(0);
   ellipse(110,695,10,10);
   line(90,695,110,695);
   
+}
+function sun(x){
+  
+  fill(200,200,0);
+  ellipse(x,0,400,400);
+  if (keyIsPressed === true && keyCode === RIGHT_ARROW){
+    sunX = sunX+10;//moves the sun right
+  }
+  if (keyIsPressed === true && keyCode === LEFT_ARROW){
+    sunX = sunX-10;//moves the sun left
+  }
 }
 
 function draw() {
@@ -112,4 +124,5 @@ function draw() {
   tree();
   leaves(1465,570);
   name();
+  sun(sunX);
 }

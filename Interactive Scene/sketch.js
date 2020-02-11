@@ -23,15 +23,20 @@ function currentBack(){
     cB = 0;
     fill(200,0,0);
     rect(0,0,2000,600);
-    cB = cB++;
+    cB++;
   }
-  if (mouseIsPressed === true && cB === 1){
+  else if (mouseIsPressed === true && cB === 1){
     cB = 1;
     fill(0,200,0);
     rect(0,0,2000,600);
-    cB = cB++;
+    cB++;
   }
-  
+  else if (mouseIsPressed === true && cB === 2){
+    cB = 0;
+    fill(0,0,200);
+    rect(0,0,2000,600);
+
+  }
 }
 function sky(){
   fill(0,100,200);
@@ -144,4 +149,5 @@ function draw() {
   leaves(1465,570);
   name();
   sun(sunX);
+  print(cB);
 }

@@ -45,75 +45,62 @@ function draw() {
   print(state);
   
   if(state === 1){
-    colour = 0;
+    shade = 0;
+    colour = shade;
     fill(colour);
-    rect(0,0,width/2,height/2);
-    
-  }
-  else if(state > 1){
-    if (colour === 255 && shade === 0){
-      if(shade < 255){
-        shade = shade + 1;
-      }
-      colour = shade;
-      fill(colour)
-      rect(0,0,width/2,height/2);
-      
-    }
+    rect(0,0,width/2,height/2);  
   }
   else{
-    colour = 255;
+    colour = shade;
+    if(shade < 255){
+      shade = shade + 1;
+    }
     fill(colour);
     rect(0,0,width/2,height/2)
+  
   }
   if(state === 2){
-    colour = 0;
+    shade = 0;
+    colour = shade;
     fill(colour);
     rect(width/2,0,width/2,height/2);
   }
-  //else if(state > 2 || state < 2){
-    //if(colour === 255){
-      //colour = 0;
-      //fill(colour)
-      //rect(width/2,0,width/2,height/2);
-    //} 
-  //}
+  
   else{
-    colour === 255;
+    colour = shade;
+    if(shade < 255){
+      shade = shade + 1;
+    }
     fill(colour);
     rect(width/2,0,width/2,height/2);
   }
   if(state === 3){
-    colour = 0;
+    
+    colour = shade;
     fill(colour);
     rect(width/2,height/2,width/2,height/2);
   }
-  //else if(state > 3 || state < 3){
-    //if(colour === 255){
-      //colour = 0;
-      //fill(colour)
-      //rect(width/2,height/2,width/2,height/2);
-    //}
-  //}
+  
   else{
-    colour = 255;
+    colour = shade;
+    if(shade < 255){
+      shade = shade + 1;
+    }
     fill(colour);
     rect(width/2,height/2,width/2,height/2);
   }
   if (state === 4){
-    colour = 0;
+    
+    colour = shade;
     fill(colour);
     rect(0,height/2,width/2,height/2);
   }
-  //else if(state > 4 || state < 4){
-    //if(colour === 255){
-      //colour = 0;
-      //fill(colour)
-      //rect(0,height/2,width/2,height/2);
-    //}
-  //}
+  
   else{
-    colour = 255;
+    colour = shade;
+    if(shade < 255){
+      shade = shade + 1;
+    }
     fill(colour);
     rect(0,height/2,width/2,height/2);
   }

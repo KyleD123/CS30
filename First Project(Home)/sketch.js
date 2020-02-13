@@ -50,6 +50,7 @@ function keyPressed(){
 }
 
 
+
 function man(){
   keyPressed();
   fill(200);
@@ -59,6 +60,7 @@ function man(){
     fill(0);
     rect(x,y,75,50);
   }
+
   if (x >= width-85){
     x = x-5;
   }

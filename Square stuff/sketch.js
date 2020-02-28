@@ -6,7 +6,7 @@
 // - describe what you did to take this project "above and beyond"
 
 let gridSpacing = 30;
-
+let mouse = 0;
 
 
 function setup() {
@@ -34,7 +34,7 @@ function rectGrid() {
   for (let y = 0; y < height; y += gridSpacing) {
 
     for (let x = 0; x < width; x += gridSpacing) {
-      fill(random(255), random(255), random(255));
+      fill(random(150), random(150), random(150));
       rect(x, y, gridSpacing, gridSpacing);
 
     }

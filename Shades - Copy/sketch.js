@@ -58,19 +58,19 @@ function setup() {
 function stateUpdate(){
   if(mouseX < width/2 && mouseY < height/2){
     state = 1;
-    topLeft = true;
+    
   }
   else if(mouseX > width/2 && mouseY < height/2){
     state = 2;
-    topRight = true;
+    
   }
   else if(mouseX < width/2 && mouseY > height/2){
     state = 4;
-    bottomLeft = true;
+    
   }
   else if(mouseX > width/2 && mouseY > height/2){
     state = 3;
-    bottomRight = true;
+    
   }
 }
 

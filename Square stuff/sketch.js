@@ -20,8 +20,10 @@ function mouseClicked() {
     rectGrid();
   }
   else{
-    gridSpacing = gridSpacing - 20;
-    rectGrid();
+    if(gridSpacing > 20){
+      gridSpacing = gridSpacing - 20;
+      rectGrid();
+    }
   }
   
 }
@@ -34,7 +36,7 @@ function rectGrid() {
   for (let y = 0; y < height; y += gridSpacing) {
 
     for (let x = 0; x < width; x += gridSpacing) {
-      fill(random(150), random(150), random(150));
+      fill(random(150), random(150), 0);
       rect(x, y, gridSpacing, gridSpacing);
 
     }

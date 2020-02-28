@@ -6,9 +6,7 @@
 // - describe what you did to take this project "above and beyond"
 
 let state = 0;
-let colour = 0;
-<<<<<<< HEAD
-let shade = 0;
+
 let q1 = 255;//q colour
 let q2 = 255;//q colour
 let q3 = 255;//q colour
@@ -50,12 +48,7 @@ function mousePressed() {
   }
 }
 
-=======
-let topLeft = false;
-let topRight = false;
-let bottomLeft = false;
-let bottomRight = false;
-let shade = 0;
+
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -83,12 +76,10 @@ function stateUpdate(){
 
 
 
->>>>>>> 4fcfd30f1305cc649fa11a23e1896b0cbc213eca
 function draw() {
   background(220);
   stateUpdate();
   print(state);
-<<<<<<< HEAD
   print(lightSwitch2);
   if (state === 1) {
     q1 = 0;
@@ -144,70 +135,4 @@ function draw() {
     rect(0, height / 2, width / 2, height / 2);
   }
   
-=======
-  
-  if(state === 1){
-    shade = 0;
-    colour = shade;
-    fill(colour);
-    rect(0,0,width/2,height/2);  
-  }
-  else{
-    colour = shade;
-    if(shade < 255){
-      shade = shade + 1;
-    }
-    fill(colour);
-    rect(0,0,width/2,height/2)
-  
-  }
-  if(state === 2){
-    shade = 0;
-    colour = shade;
-    fill(colour);
-    rect(width/2,0,width/2,height/2);
-  }
-  
-  else{
-    colour = shade;
-    if(shade < 255){
-      shade = shade + 1;
-    }
-    fill(colour);
-    rect(width/2,0,width/2,height/2);
-  }
-  if(state === 3){
-    
-    colour = shade;
-    fill(colour);
-    rect(width/2,height/2,width/2,height/2);
-  }
-  
-  else{
-    colour = shade;
-    if(shade < 255){
-      shade = shade + 1;
-    }
-    fill(colour);
-    rect(width/2,height/2,width/2,height/2);
-  }
-  if (state === 4){
-    
-    colour = shade;
-    fill(colour);
-    rect(0,height/2,width/2,height/2);
-  }
-  
-  else{
-    colour = shade;
-    if(shade < 255){
-      shade = shade + 1;
-    }
-    fill(colour);
-    rect(0,height/2,width/2,height/2);
-  }
-  
-  
-  
->>>>>>> 4fcfd30f1305cc649fa11a23e1896b0cbc213eca
 }

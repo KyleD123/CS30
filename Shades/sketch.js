@@ -36,21 +36,15 @@ function stateUpdate(){
     bottomRight = true;
   }
 }
-
-
-
-function draw() {
-  background(220);
-  stateUpdate();
-  print(state);
-  
-  if(state === 1){
+function upLeft(){
+  if(state === 1 && topLeft === true){
     shade = 0;
     colour = shade;
     fill(colour);
     rect(0,0,width/2,height/2);  
   }
-  else{
+  else if(state !== 1){
+    
     colour = shade;
     if(shade < 255){
       shade = shade + 1;
@@ -59,14 +53,16 @@ function draw() {
     rect(0,0,width/2,height/2)
   
   }
-  if(state === 2){
+}
+function upRight(){
+  if(state === 2 && topRight === true){
     shade = 0;
     colour = shade;
     fill(colour);
     rect(width/2,0,width/2,height/2);
   }
   
-  else{
+  else if(state !== 2){
     colour = shade;
     if(shade < 255){
       shade = shade + 1;
@@ -74,14 +70,16 @@ function draw() {
     fill(colour);
     rect(width/2,0,width/2,height/2);
   }
-  if(state === 3){
-    
+}
+function downRight(){
+  if(state === 3 && bottomRight === true){
+    shade = 0;
     colour = shade;
     fill(colour);
     rect(width/2,height/2,width/2,height/2);
   }
   
-  else{
+  else if(state !== 3){
     colour = shade;
     if(shade < 255){
       shade = shade + 1;
@@ -89,14 +87,17 @@ function draw() {
     fill(colour);
     rect(width/2,height/2,width/2,height/2);
   }
-  if (state === 4){
+}
+
+function downLeft(){
+  if (state === 4 && bottomLeft === true){
     
     colour = shade;
     fill(colour);
     rect(0,height/2,width/2,height/2);
   }
   
-  else{
+  else if(state !== 4){
     colour = shade;
     if(shade < 255){
       shade = shade + 1;
@@ -104,7 +105,15 @@ function draw() {
     fill(colour);
     rect(0,height/2,width/2,height/2);
   }
-  
-  
+}
+
+function draw() {
+  background(220);
+  stateUpdate();
+  print(state);
+  upLeft();
+  upRight();
+  downRight();
+  downLeft();  
   
 }
